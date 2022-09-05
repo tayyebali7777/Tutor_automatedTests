@@ -114,7 +114,7 @@ function randomPass() // randompass for validation
 {
 
 }
-
+// new
 
   //  cy.get('.highlight').eq(0).should('contains.text', 'Pakistan');
 //  cy.get('select[id="data-dial-code"]').select('92').should('have.value', '92')

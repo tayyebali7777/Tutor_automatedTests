@@ -28,24 +28,17 @@ describe('Login Function', function()
         cy.get('.row > :nth-child(2) > .auth-input > .form-control').click().type(DOB());// Tutor DOB
         cy.get(':nth-child(1) > .custom-control-label').click();      //Certified Tutor -> Yes
         cy.get('.check').click() // Terms & Conditions
-        cy.get('.signupButton').click() //Signup button
+        cy.get('.signupButton').click();   
+        
+        if(cy.get('.toastify')) //if user is already created
+    {
+       cy.get('.log-green').click(); // go to login screen
+    }
 
     })
     
 })
 
-
-describe('on-boarding', function()
-{
-
-it('close notification', function()
-{
-    cy.get('.toast-close').click();
-
-})
-
-
-})
 
 function tutorName() // for Tutor Name
 {
@@ -78,6 +71,7 @@ function DOB() // For Tutor DOB
     let dob = "2000-10-10";
     return dob;
 }
+
 
 
 
